@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>P5.js Ramadan Workshop</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+
+        <script src="libraries/p5.min.js"></script>
+        <script src="libraries/p5.sound.min.js"></script>
+    </head>
+
+    <body>
+        <p>I'll start with a quick FAQ.</p>
+        <p><i>What is creative coding?</i> - Creative coding is a dicipline that uses code not for the sake of solving some kind of real world problem, but for the sake of being creative and expressive. 
+        Computers allow for some interesting possibilities, like incorporating randomness into your work, simulating a system, or allowing user input to affect the work.</p>
+        <p><i>Coding scary tho!</i> - It doens't have to be! Having grown in this day and age, it is very likely that you've already absorbed a bunch of coding skills just by playing videogames or interacting with technology.
+        My first coding teacher in uni never took advanced Math classes - in fact, he was about to do a Literature Ph.D.! But now he's a professional videogame programmer.
+        His words on our first lesson will always stay with me: <b>"You only need 2 things to be a programmer: a lot of patience and great Googling skills."</b>
+        And this is true. Even as a professional, you can learn a lot by just Googling the answers to the questions you are stumped by.</p>
+        <p><i>But Python :( </i> - If you're just starting out, I promise P5 will make things really accessible. If you already know Python, learning a new language will help you move forward quite a bit in your coding journey!</p>
+        <p>Ok, with those things out of the way, let's get started! The first session is all about getting your setup done. Not much code, but getting through this will make everything wayyy simpler.</p>
+        <br></br>
+        <p><b>Part 1:</b> What is P5.js?</p>
+        <p><b>P5.js</b> is a Javascript library for creative coding, designed to be accessible to everybody.</p>
+        <p><b>Javascript</b> is what makes the internet go round, from Netflix to Managebac. While HTML and CSS tell a browser what to show, they can't run any logic on them. Javascript will allow you to change variables, run if-statements, check for user input, and many, many other things!</p>
+        <p>A <b>library</b> then, is just a bunch of code someone else has written to make your own code easier. It's not usually super simple to get Javascript to draw a rectangle on the screen, but with P5.js it only requires 1 line of code!</p>
+        <br>
+        <p>There are two ways to work with P5.js: a short one and a long one.</p>
+        <p><b>Part 2:</b> P5.js online editor</p>
+        <p>If you just wanna jump in and code, then you're in luck! Just go <a href="https://editor.p5js.org/">here</a>!</p>
+        <p>This is the P5.js web editor, where you can just write code, press play, and see the results immediately, all on one browser page. It's wonderful! And for learning or prototyping purposes, it works really well.</p>
+        <p>However, this web editor makes it slghtly tricky to do things like sharing your work or making more complex things (for example, making a website with multiple P5.js sketches, or adding your sketches to an existing website).</p>
+        <p>This is why we need to take the long route.</p>
+        <br>
+        <p><b>Part 3:</b> VSCode</p>
+        <p><i>VSCode</i> is a text editor. This is the name we give to software that allows us to write code. VSCode is great because a lot of people use it and have built extensions to make all kind of work easier!</p>
+        <p>In fact, I made this lame website from scratch using VSCode :)</p>
+        <p>To write our P5.js code using VSCode we simply need to follow a few steps.</p>
+        <p><b>1.- Download VSCode</b> <a href='https://code.visualstudio.com/download'>here</a>.</p>
+        <p><b>2.-</b> Open VSCode and go to the extensions page. You can get to it by clicking the icon that looks like 4 squares on the far left.</p>
+        <p><b>3.- Install p5.vscode.</b> In extensions, search for p5.vscode and install it. This extension will allow you to make a folder with everything P5.js needs with a single command.</p>
+        <p><b>3.5 - Install p5js Snippets.</b> Optional, but this will make your life much easier in the future.</p>
+        <br> 
+        <p>With these three simple steps, you'll already be on your way to start coding with P5.js! However, there is one key issue... how do you open your sketches? If you try to open the HTML from your folder, you might realize that your sketch doesn't show up. This is because, in order to run Javascript, your code needs to be run from a server.</p>
+        <p>You could then, just upload all your files to github and run the server there, but this can be slow and, unless you pay, you can't keep your work private if you want to see the full results.</p>
+        <p>Instead, we have one more extension:</p>
+        <p><b>4.- Install Live Server.</b> Go back to the extensions page and install Live Server (the one with the purple icon and over 33 million downloads). Live Server will give you a little button at the bottom of VSCode that says "Go Live". Click that and not only will your P5.js sketches open on your browser, but they will also auto-update whenever you save the files on your computer.</p>
+        <p>And that's it!</p>
+        <br>
+        <p>To wrap up, let's make a super simple P5.js sketch!</p>
+        <p><b>Part 4:</b> Super simple sketch</p>
+        <p>Open up VSCode and press Ctrl+Shift+p (or Cmnd+Shift+p for the mac users, I guess...). Search for the "Create P5.js project" command, which is provided by the p5.vscode extension we installed.</p>
+        <p>Choose a folder to create your project in.</p>
+        <p>Once you have your folder, open the "sketch.js" file. It should look something like this:</p>
+        <pre><code>
+            function setup() {
+                createCanvas(400, 400);
+            }
+          
+            function draw() {
+                background(220);
+            }</code></pre>
+        <p>Now add the line <code>text("Hola mundo!", 100, 100);</code> right after <code>background(220);</code></p>
+        <p>And that's it for today!</p>
+        <br>
+        <pre><code>
+            function setup() {
+                createCanvas(400, 400);
+            }
+          
+            function draw() {
+                background(220);
+                text("Hola mundo!", 100, 100);
+            }</code></pre>
+
+        <script src="holaMundo.js"></script>
+    </body>
+</html>
